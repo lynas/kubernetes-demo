@@ -18,7 +18,8 @@
 - `https://kubernetes.io/docs/tasks/tools/`
 
 ## Create namespace
-`kubectl apply -f namspace.yaml`
+- `kubectl apply -f namespace.yaml`
+- In Lens top right Click on all Namespaces and select `bookstore` namespace to see only resources associated to `bookstore` namespace
 
 ## Create Deployment/Pod
 - `kubectl apply -f deployment.yaml`
@@ -59,12 +60,15 @@
 - With helm Create directory and file structure 
 - `helm create book-store-helm`
 - Start the namespace again, This will only create the namespace
-- `kubectl apply -f namspace.yaml`
+- `kubectl apply -f namespace.yaml`
 - Run app with one command using helm
 - `helm start bookstore book-store-helm`
 - Above command needs to run one time after that any modification can be applied with following command
 - e.g. changing replica from 1 to 3
 - change only `book-store-helm/values.yaml` then run following
 - `helm upgrade bookstore book-store-helm`
+- open browser go to 
+- `bookstore.com`
+- You should see same result as before
 - To delete helm which deletes all associated resource of bookstore
 - `helm delete bookstore`
