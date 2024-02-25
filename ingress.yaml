@@ -5,7 +5,7 @@ metadata:
   namespace: development
 spec:
   rules:
-    - host: sazzadarr.com
+    - host: sazzad.com
       http:
         paths:
           - path: /
