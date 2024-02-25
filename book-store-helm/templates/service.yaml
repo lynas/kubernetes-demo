@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: bookstore-app-service
-  namespace: bookstore
+  name: {{ .Values.serviceName }}
+  namespace: {{ .Values.nameSpace }}
 spec:
   selector:
-    app: bookstore-app
+    app: {{ .Values.appName }}
   ports:
     - port: 80
       targetPort: 80

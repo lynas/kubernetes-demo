@@ -1,17 +1,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: bookstore-app-ingress
-  namespace: bookstore
+  name: {{ .Values.ingressName }}
+  namespace: {{ .Values.nameSpace }}
 spec:
   rules:
-    - host: bookstore.com
+    - host: {{ .Values.hostName }}
       http:
         paths:
           - path: /
             backend:
-             service:
-               name: bookstore-app-service
+             service: 
+               name: {{ .Values.serviceName }}
                port:
                  number: 80
             pathType: Prefix

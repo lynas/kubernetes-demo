@@ -1,0 +1,6 @@
+replicaCount: 1
+nameSpace: bookstore
+serviceName: bookstore-app-service
+appName: bookstore-app
+hostName: bookstore.com
+ingressName: bookstore-ingress
