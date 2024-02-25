@@ -6,7 +6,7 @@ metadata:
   labels:
     app: pod-info
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: pod-info
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: pod-info-container
-          image: kimschles/pod-info-app:latest
+          image: nginx:latest
           resources:
             requests:
               cpu: 30m
@@ -26,12 +26,14 @@ spec:
               cpu: 100m
               memory: 128Mi
           securityContext:
-            allowPrivilegeEscalation: false
-            runAsNonRoot: true
-            capabilities:
-              drop:
-                - ALL
-            readOnlyRootFilesystem: true
+#            allowPrivilegeEscalation: false
+            runAsNonRoot: false
+#            runAsUser: 2000
+#            runAsGroup: 3000
+#            capabilities:
+#              drop:
+#                - ALL
+#            readOnlyRootFilesystem: true
           ports:
             - containerPort: 3000
           env:
