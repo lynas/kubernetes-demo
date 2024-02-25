@@ -17,6 +17,7 @@ spec:
     spec:
       containers:
         - name: bookstore-app-container
+          # Will generally get this from a private image repo like ECR (Amazon Elastic Container Registry)
           image: nginx:latest
           resources:
             requests:

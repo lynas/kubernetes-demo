@@ -8,6 +8,10 @@
 - install minikube
 - start minikube by running 
     - `minikube start`
+    - Open lens
+    - Click on the Catalogue (Top left)
+    - minikube should be in the list 
+    - Click on minikube to see the minikube cluster in Lens
     - `minikube stop` (to stop minikube)
 
 ## Install kubectl
