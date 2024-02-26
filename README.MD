@@ -27,6 +27,8 @@
 - `kubectl delete -f deployment.yaml`
 #### By default app deployed in pod can not be accessed from out side
 #### To allow access service is needed
+#### Secret like DB_PASSWORD can be added in `Secrets` tab under `Config` menu in Lense
+#### Then this can be referenced in deployment.yaml under `env`
 
 ## Create service
 - `kubectl apply -f service.yaml`
