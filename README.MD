@@ -64,7 +64,7 @@
 - Start the namespace again, This will only create the namespace
 - `kubectl apply -f namespace.yaml`
 - Run app with one command using helm
-- `helm start bookstore book-store-helm`
+- `helm install bookstore book-store-helm`
 - Above command needs to run one time after that any modification can be applied with following command
 - e.g. changing replica from 1 to 3
 - change only `book-store-helm/values.yaml` then run following
