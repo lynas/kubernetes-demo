@@ -36,8 +36,8 @@
 - Delete service
 - `kubectl delete -f service.yaml`
 
-#### At this point app can be used using host:port
-#### To allow access app only using host ingress is needed
+#### At this point app can be used using host:port e.g. `http://bookstore.com:5000`
+#### To allow access app only using host ingress is needed. e.g `http://bookstore.com`
 
 ## Create ingress controller
 - Locally run `minikube addons enable ingress` 
