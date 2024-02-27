@@ -4,6 +4,7 @@ metadata:
   name: bookstore-app-ingress
   namespace: bookstore
 spec:
+  ingressClassName: nginx
   rules:
     - host: bookstore.com
       http:
