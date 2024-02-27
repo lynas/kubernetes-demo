@@ -5,6 +5,7 @@
 - `https://k8slens.dev/`
 
 ## Run kubernetes cluster locally
+[Linux]
 - install minikube
 - start minikube by running 
     - `minikube start`
@@ -13,6 +14,11 @@
     - minikube should be in the list 
     - Click on minikube to see the minikube cluster in Lens
     - `minikube stop` (to stop minikube)
+[Macos]
+- Install docker desktop
+- Run docker desktop and go to setting
+- Click on Kubernetes
+- Enable and Apply & Restart
 
 ## Install kubectl
 - `https://kubernetes.io/docs/tasks/tools/`
@@ -40,8 +46,14 @@
 #### To allow access app only using host ingress is needed. e.g `http://bookstore.com`
 
 ## Create ingress controller
+[Linux]
 - Locally run `minikube addons enable ingress` 
 - Start ingress pointing to the service above
+[Mac via Docker desktop]
+- https://kubernetes.github.io/ingress-nginx/deploy/#quick-start
+- helm upgrade --install ingress-nginx ingress-nginx \
+  --repo https://kubernetes.github.io/ingress-nginx \
+  --namespace ingress-nginx --create-namespace
 - `kubectl apply -f ingress.yaml`
 - Get ingress ip
 - `kubectl describe ingress -n bookstore`
