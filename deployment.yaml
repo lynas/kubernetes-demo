@@ -18,19 +18,19 @@ spec:
       containers:
         - name: bookstore-app-container
           # Will generally get this from a private image repo like ECR (Amazon Elastic Container Registry)
-          image: euznsazzad/sazzad-kubernetes-demo:1.0.0
+          image: euznsazzad/sazzad-kubernetes-demo:1.0.2
           ports:
             - containerPort: 8080
           resources:
             requests:
               # This specifies the minimum CPU request, set to 30 millicores (m).
               # This means the container needs at least 30/1000 of a CPU core (roughly 3% of a single core).
-              cpu: 500m
+              cpu: 250m
               # This specifies the minimum memory request, set to 65 Megabytes (Mi).
-              memory: 5000Mi
+              memory: 500Mi
             limits:
-              cpu: 500m
-              memory: 5000Mi
+              cpu: 350m
+              memory: 600Mi
           securityContext:
             runAsNonRoot: false
           env:
