@@ -16,15 +16,21 @@ spec:
         app: {{ .Values.appName }}
     spec:
       containers:
-        - name: bookstore-container
-          image: nginx:latest
+        - name: bookstore-app-container
+          # Will generally get this from a private image repo like ECR (Amazon Elastic Container Registry)
+          image: euznsazzad/sazzad-kubernetes-demo:1.0.0
+          ports:
+            - containerPort: 8080
           resources:
             requests:
-              cpu: 30m
-              memory: 65Mi
+              # This specifies the minimum CPU request, set to 30 millicores (m).
+              # This means the container needs at least 30/1000 of a CPU core (roughly 3% of a single core).
+              cpu: 500m
+              # This specifies the minimum memory request, set to 65 Megabytes (Mi).
+              memory: 5000Mi
             limits:
-              cpu: 100m
-              memory: 128Mi
+              cpu: 500m
+              memory: 5000Mi
           securityContext:
             runAsNonRoot: false
           env:
