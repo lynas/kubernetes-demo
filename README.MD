@@ -65,7 +65,7 @@
 - open browser go to 
 - `bookstore.com`
 
-#### Rather than running above command separately all of above can be automated using helm / helm chart
+#### Rather than running above command separately all above can be automated using helm / helm chart
 #### Before configuring and running helm delete the namespace. It will delete namespace and associated
 - deployment/pod
 - service
