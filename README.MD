@@ -1,6 +1,6 @@
 # Kubernetes tutorial
 
-## Install lense
+## Install lens
 - Manage and monitor kubernetes cluster
 - `https://k8slens.dev/`
 
