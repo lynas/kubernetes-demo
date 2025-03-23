@@ -1,5 +1,6 @@
 # Kubernetes tutorial
 
+## Youtube (https://www.youtube.com/watch?v=AXYheeyy6gg)
 ## Install lens
 - Manage and monitor kubernetes cluster
 - `https://k8slens.dev/`
